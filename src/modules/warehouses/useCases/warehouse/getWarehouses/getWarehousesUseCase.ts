@@ -4,8 +4,9 @@ import { Result, SuccessOrFailure } from '../../../../../shared/core/Result';
 import { UseCase } from '../../../../../shared/core/UseCase';
 import { Warehouse } from '../../../domain/warehouse/warehouse';
 import { WarehouseRepo } from '../../../repos/warehouse/warehouseRepo/warehouseRepo';
+import { GetWarehousesErrors } from './getWarehousesErrors';
 
-type Response = Either<AppError.UnexpectedError, SuccessOrFailure<Warehouse[]>>;
+type Response = Either<AppError.UnexpectedError | GetWarehousesErrors.WarehouseDoesntExists, SuccessOrFailure<Warehouse[]>>;
 
 export class GetWarehousesUseCase implements UseCase<null, Promise<Response>> {
   private warehouseRepo: WarehouseRepo;
@@ -17,6 +18,11 @@ export class GetWarehousesUseCase implements UseCase<null, Promise<Response>> {
   async execute(): Promise<Response> {
     try {
       const warehouses = await this.warehouseRepo.getAllWarehouses();
+
+      if (!warehouses.length) {
+        return left(new GetWarehousesErrors.WarehouseDoesntExists());
+      }
+
       return right(Result.ok<Warehouse[]>(warehouses));
     } catch (error) {
       return left(new AppError.UnexpectedError(error));

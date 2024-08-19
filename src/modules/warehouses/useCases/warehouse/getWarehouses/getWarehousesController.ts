@@ -3,6 +3,7 @@ import { BaseController, RequestMethods } from '../../../../../shared/infra/http
 import { GetWarehousesUseCase } from './getWarehousesUseCase';
 import { WarehouseMap } from '../../../mappers/warehouseMap';
 import { GetWarehousesResponseDTO } from './getWarehousesResponseDTO';
+import { GetWarehousesErrors } from './getWarehousesErrors';
 
 export class GetWarehousesController extends BaseController {
   path: string = '/v1/warehouses/warehouses';
@@ -23,6 +24,8 @@ export class GetWarehousesController extends BaseController {
         const error = result.value;
 
         switch (error.constructor) {
+          case GetWarehousesErrors.WarehouseDoesntExists:
+            return this.notFound(res, error.getErrorValue());
           default:
             return this.fail(res, error.getErrorValue());
         }
