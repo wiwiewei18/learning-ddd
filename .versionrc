@@ -1,0 +1,39 @@
+{
+  "types": [
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "chore",
+      "hidden": true
+    },
+    {
+      "type": "docs",
+      "hidden": true
+    },
+    {
+      "type": "style",
+      "hidden": true
+    },
+    {
+      "type": "refactor",
+      "hidden": true
+    },
+    {
+      "type": "perf",
+      "hidden": true
+    },
+    {
+      "type": "test",
+      "hidden": true
+    }
+  ],
+  "commitUrlFormat": "https://bitbucket.org/grip-batam/smartapes-backend-ts/commits/{{hash}}",
+  "compareUrlFormat": "https://bitbucket.org/grip-batam/smartapes-backend-ts/branches/compare/{{currentTag}}%0D{{previousTag}}",
+  "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n"
+}

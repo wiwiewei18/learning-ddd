@@ -1,0 +1,4 @@
+{
+  "pattern": "^(production|development)$|^(feature|(bug|hot)?fix)/SA-I[0-9].+$",
+  "errorMsg": "the branch name is invalid, please prefix it with production/development/feature/bugfix/hotfix with TASK ID and separate the branch with /, ex: feature/SA-I6969-init-user"
+}

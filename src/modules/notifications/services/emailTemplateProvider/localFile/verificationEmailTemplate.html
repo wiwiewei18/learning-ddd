@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 88px;
+        background: url('https://i.imgur.com/UdAAGev.png') no-repeat;
+      }
+
+      .container .containerEmail {
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .titleContent {
+        color: #7e54f1;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .textContent {
+        margin: 0 40px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .containerEmail .textEmail {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .containerEmail .usernameEmail {
+        margin-top: -20px;
+        font-size: 38px;
+        font-weight: 700;
+        color: #7e54f1;
+      }
+
+      button {
+        padding: 12px 55px;
+        background-color: #7e54f1;
+        border: none;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 8px;
+        margin-top: 26px;
+        cursor: pointer;
+      }
+
+      .contentEmail {
+        margin-top: 170px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img src="https://i.imgur.com/WgMBjS4.png" alt="logo" style="margin-top: 40px" />
+        <div class="containerEmail">
+          <p class="textEmail">Verify your Email</p>
+          <p class="usernameEmail">Hi, {{{fullName}}}!</p>
+          <div style="position: relative">
+            <img
+              src="https://i.imgur.com/pk6QMYA.png"
+              alt="underline username"
+              style="position: absolute; bottom: 25px; right: 40%"
+            />
+          </div>
+          <p class="textContent">
+            Please verify your email to continue to our platform. Click this button below to continue the another step.
+          </p>
+          <button>
+            <a style="text-decoration: none; color: white" href="{{{verificationEmailUrl}}}"> Verify your Email </a>
+          </button>
+        </div>
+      </div>
+      <div class="contentEmail">
+        <img src="https://i.imgur.com/38pACH3.png" alt="astro and roket" />
+        <div>
+          <p class="titleContent">Study Anywhere and Anytime</p>
+          <p class="textContent">
+            SMART APES is the best platform to support your child to study and learn new things. With SMART APES, we can give
+            you best recommendation for Online Courses for child, best Education Material, Educational Toys who can support
+            your child when study. So SMART APES is your best choice!
+          </p>
+        </div>
+      </div>
+      <div style="margin-top: 30px">
+        <img src="https://i.imgur.com/7aKTOaa.png" alt="astro monkey" />
+        <div>
+          <p class="titleContent">Study Anywhere and Anytime</p>
+          <p class="textContent">
+            SMART APES is the best platform to support your child to study and learn new things. With SMART APES, we can give
+            you best recommendation for Online Courses for child, best Education Material, Educational Toys who can support
+            your child when study. So SMART APES is your best choice!
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div style="border: 3px solid #f1f1f1; margin: 50px 0"></div>
+        <img src="https://i.imgur.com/iQ5ZvQf.png" alt="icon sosmed" />
+        <p class="textContent">
+          This email is automatically sent to you after you login to. If there’s any question, contact us at
+          support@smartapes.com
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

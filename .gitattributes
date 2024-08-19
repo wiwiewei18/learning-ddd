@@ -1,0 +1,11 @@
+# Convert text file line endings to lf
+* text eol=lf
+*.js text
+*.ts text
+
+# treat these as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.xlsx binary

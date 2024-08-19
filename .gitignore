@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Error logs
+yarn-error.log
+logs
+
+# Environment varibales
+.env*
+!.env*.example
+
+# Code coverage
+coverage
+
+# Compiled ts
+dist
