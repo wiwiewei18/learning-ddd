@@ -21,3 +21,9 @@ The main building blocks commonly used in DDD are:
 - **[Domain Event](docs/ddd-building-blocks.md#domain-event)** – Represents significant events that occur within the domain.
 - **[Subdomain](docs/ddd-building-blocks.md#subdomain)** – Logical divisions of the business domain
 - **[Bounded Context](docs/ddd-building-blocks.md#bounded-context)** – A boundary within which a particular domain model and terminology are valid.
+
+## Project Planning
+
+How to approach planning a new project before writing code:
+
+- **[How to Plan a New Project](docs/project-planning.md)** – Imperative design (Database-first, UI-first, API-first) vs Declarative design (Use-Case Driven Design).
