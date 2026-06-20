@@ -105,3 +105,39 @@ Grouping by subdomain helps you:
 ### Connection to API-First Design
 
 API-first design is essentially use-case driven design in disguise — each API endpoint maps to a use case. The difference is that use-case driven design is more explicit about actors, goals, and business logic documentation (e.g. Given-When-Then).
+
+---
+
+## Event Storming
+
+A collaborative modeling workshop where developers and domain experts get together to map out a business domain using sticky notes on a wall or whiteboard.
+
+Invented by **Alberto Brandolini** — originally as an improvisation when he didn't have enough time for a full UML session.
+
+The big value here is alignment. Everyone — technical and non-technical — walks out of the room with the same picture of how the system works.
+
+### Why bother?
+
+Developers don't understand the business as well as the people who work in it every day. When developers design in isolation, they fill in the gaps with assumptions — and those assumptions often turn out to be wrong.
+
+Even worse, different developers end up with different mental models. The codebase starts to reflect several different interpretations of the same domain, which makes it unreliable and hard to maintain.
+
+Event Storming closes that gap by getting everyone in the same room with a shared language.
+
+### The steps
+
+- **Step 0 — Legend** — Define all sticky note types and their colors before starting.
+- **Step 1 — Domain Events 🟠** — List everything that _happens_ in the business on orange stickies, left to right in chronological order. Use past tense: `PostCreated`, `UserRegistered`.
+- **Step 2 — Commands 🔵** — For each event, add a blue sticky to its left for the command that caused it. Also note the Actor who triggered it: `CreatePost → PostCreated`.
+- **Step 3 — Aggregates 🟡** — Place a pale yellow sticky between each Command/Event pair to identify the Aggregate being acted on: `CreatePost → Post → PostCreated`.
+- **Step 4 — Boundaries** — Group related stickies into subdomains and bounded contexts. This is the hardest step — apply Conway's Law.
+- **Step 5 — Views & Roles** — For each command, identify what the user needs to see (View) and who performs the action (Role).
+- **Step 6 (Optional) — Rules & Policies 🔵** — Use neon blue stickies to document preconditions for each command. These become Given-When-Then acceptance tests later.
+
+### What you have at the end
+
+- A timeline of everything that can happen in the system
+- Every command that drives those events, with the actors behind them
+- The aggregates that handle each command
+- A clear map of subdomain and bounded context boundaries
+- The views and roles tied to each use case

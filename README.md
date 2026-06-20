@@ -26,4 +26,4 @@ The main building blocks commonly used in DDD are:
 
 How to approach planning a new project before writing code:
 
-- **[How to Plan a New Project](docs/project-planning.md)** – Imperative design (Database-first, UI-first, API-first) vs Declarative design (Use-Case Driven Design).
+- **[How to Plan a New Project](docs/project-planning.md)** – Imperative design (Database-first, UI-first, API-first) vs Declarative design (Use-Case Driven Design, Event Storming).
